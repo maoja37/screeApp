@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scree/Screens/onboarding1.dart';
+import 'package:scree/Screens/LoginProcess/onboarding1.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scree/Screens/sign_in_screnn.dart';
+import 'package:scree/Screens/LoginProcess/sign_in_screnn.dart';
 import 'package:scree/constants.dart';
 
 class GetStartedScreen extends StatelessWidget {
@@ -30,34 +30,34 @@ class GetStartedScreen extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            child: Column(
-              children: [
-                Text(
-                  'Welcome! Let\'s get \nyou started',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 34,
-                      color: primary2,
-                      fontWeight: FontWeight.w700,
-                      height: 1.5),
-                ),
-                SizedBox(
-                  height: 18,
-                ),
-                Text(
-                  'Create a scree account to continue',
-                  style: TextStyle(
-                    color: Color(0xff303030),
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 27),
+              child: Column(
+                children: [
+                  Text(
+                    'Welcome! Let\'s get \nyou started',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 34,
+                        color: primary2,
+                        fontWeight: FontWeight.w700,
+                        height: 1.5),
                   ),
-                ),
-                SizedBox(
-                  height: 60,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 27),
-                  child: MaterialButton(
+                  SizedBox(
+                    height: 18,
+                  ),
+                  Text(
+                    'Create a scree account to continue',
+                    style: TextStyle(
+                      color: Color(0xff303030),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 60,
+                  ),
+                  MaterialButton(
                     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 51),
                     onPressed: () {},
                     shape: RoundedRectangleBorder(
@@ -83,13 +83,10 @@ class GetStartedScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 32,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 27),
-                  child: MaterialButton(
+                  SizedBox(
+                    height: 32,
+                  ),
+                  MaterialButton(
                     color: Color(0xff254792),
                     padding: EdgeInsets.symmetric(vertical: 12, horizontal: 48),
                     onPressed: () {},
@@ -117,28 +114,27 @@ class GetStartedScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 48,
-                ),
-                Text(
-                  'Or',
-                  style: TextStyle(fontSize: 16, color: Color(0xff303030)),
-                ),
-                SizedBox(
-                  height: 67,
-                ),
-                GestureDetector(
-                  onTap: (){Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=> SignInScreen()),(route) => false);},
+                  SizedBox(height: 42),
+                  MaterialButton(
+                   shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100)),
+                          color: primary1,
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>  SignInScreen()));
+                  },
+                  padding: EdgeInsets.symmetric(vertical: 18),
+                  minWidth: double.infinity,
                   child: Text(
                     'Sign up with Email',
                     style: TextStyle(
+                        color: Colors.white,
                         fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: primary1),
+                        fontWeight: FontWeight.w600),
                   ),
                 ),
-              ],
+                  
+                ],
+              ),
             ),
           ),
         ],

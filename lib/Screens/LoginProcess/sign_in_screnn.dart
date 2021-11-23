@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scree/Screens/login_screen.dart';
+import 'package:scree/Screens/LoginProcess/login_screen.dart';
+import 'package:scree/Screens/LoginProcess/welcome_screen.dart';
 import 'package:scree/constants.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -21,16 +22,12 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'scree',
-                style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w600,
-                    color: primary2,
-                  ),
-                ),
-              ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Image.asset('assets/images/close_big.png',
+                      height: 24, width: 24)),
               SizedBox(
                 height: 65,
               ),
@@ -70,13 +67,13 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               SizedBox(height: 40),
               TextFormField(
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.text,
                 obscureText: _obscureText,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  labelText: 'Enter sign in PIN',
+                  labelText: 'Password',
                   labelStyle:
                       TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                   suffixIcon: GestureDetector(
@@ -119,12 +116,16 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               SizedBox(height: 57),
               MaterialButton(
-                 shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(100)),
-                        color: primary1,
-                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100)),
+                color: primary1,
+                onPressed: () {
+                  Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => WelcomeScreen())  , (route) => false);
+                },
                 minWidth: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 18,),
+                padding: EdgeInsets.symmetric(
+                  vertical: 18,
+                ),
                 child: Text(
                   'Continue',
                   style: TextStyle(
@@ -133,9 +134,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       fontWeight: FontWeight.w600),
                 ),
               ),
-
               SizedBox(height: 36),
-
               Container(
                 alignment: Alignment.center,
                 child: RichText(
@@ -148,14 +147,18 @@ class _SignInScreenState extends State<SignInScreen> {
                           fontWeight: FontWeight.w400),
                       children: <TextSpan>[
                         TextSpan(
-                            text: 'Login', style: TextStyle(color: secondary1), recognizer: TapGestureRecognizer()..onTap = (){
-                              Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=> LoginScreen()),(route) => false) ;
-                             }),
-                        
+                            text: 'Login',
+                            style: TextStyle(color: secondary1),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.of(context).pushAndRemoveUntil(
+                                    MaterialPageRoute(
+                                        builder: (context) => LoginScreen()),
+                                    (route) => false);
+                              }),
                       ]),
                 ),
               ),
-
             ],
           ),
         ),

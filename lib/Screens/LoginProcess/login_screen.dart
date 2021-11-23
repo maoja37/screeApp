@@ -1,7 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scree/Screens/sign_in_screnn.dart';
+import 'package:scree/Screens/LoginProcess/forgot_password_screen.dart';
+import 'package:scree/Screens/LoginProcess/sign_in_screnn.dart';
+import 'package:scree/Screens/LoginProcess/welcome_screen.dart';
 import 'package:scree/constants.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -84,13 +86,17 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 35,
               ),
-              Text('Forgot Password?', style: TextStyle(color: secondary1, fontWeight: FontWeight.w400, fontSize: 16),),
+              GestureDetector(onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => ForgetPasswordScreen() ));
+              },  child: Text('Forgot Password?', style: TextStyle(color: secondary1, fontWeight: FontWeight.w400, fontSize: 16),)),
               SizedBox(height: 57),
               MaterialButton(
                  shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(100)),
                         color: primary1,
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => WelcomeScreen())  , (route) => false);
+                },
                 padding: EdgeInsets.symmetric(vertical: 18),
                 minWidth: double.infinity,
                 child: Text(
