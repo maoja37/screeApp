@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:scree/Screens/WebsiteSetup/site_about.dart';
 import 'package:scree/constants.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -47,7 +48,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(100)),
               color: primary1,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> SiteAbooutScreen()));
+              },
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 18),
               child: Text(
                 'Start Creating',
