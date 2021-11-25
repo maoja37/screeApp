@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:scree/Components/back_next_nav.dart';
+import 'package:scree/Screens/WebsiteSetup/edit_info_screen.dart';
+
 import 'package:scree/constants.dart';
 
 class SiteLikeScreen extends StatefulWidget {
@@ -18,7 +20,7 @@ class _SiteLikeScreenState extends State<SiteLikeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BackNextNav(),
+      bottomNavigationBar: BackNextNav(EditInfoScreen()),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(

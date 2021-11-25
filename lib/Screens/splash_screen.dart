@@ -22,7 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
   _navigateToHome()async{
     await Future.delayed(Duration(milliseconds: 7000), (){});
 
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> SiteAbooutScreen() ));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> OnboardingScreen() 
+     ));
   }
 
   @override
