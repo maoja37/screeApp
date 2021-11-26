@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
+import 'package:scree/Screens/DashboardScreens/bottom_nav_screen.dart';
 import 'package:scree/constants.dart';
 import '';
 
@@ -11,6 +12,21 @@ class Finishing extends StatefulWidget {
 }
 
 class _FinishingState extends State<Finishing> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+  _navigateToDashboard();
+
+    super.initState();
+  }
+
+  _navigateToDashboard()async{
+    await Future.delayed(Duration(milliseconds: 7000), (){});
+
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> BottomNavBarScreen()
+     ));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

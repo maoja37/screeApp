@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scree/Screens/DashboardScreens/bottom_nav_screen.dart';
 import 'package:scree/Screens/LoginProcess/onboarding1.dart';
-import 'package:scree/Screens/WebsiteSetup/site_about.dart';
+
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   _navigateToHome()async{
     await Future.delayed(Duration(milliseconds: 7000), (){});
 
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> OnboardingScreen() 
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> BottomNavBarScreen() 
      ));
   }
 
