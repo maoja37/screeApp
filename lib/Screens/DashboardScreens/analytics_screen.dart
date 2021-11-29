@@ -17,6 +17,7 @@ class AnalyticsScreen extends StatefulWidget {
 class _AnalyticsScreenState extends State<AnalyticsScreen> {
   var selected = 0;
   final pageController = PageController();
+  final value = new NumberFormat("#,##0", "en_US");
 
   late List<SalesData> _salesData;
   late List<SalesData> _salesData2;
@@ -189,6 +190,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                             color: Color(0xff525252),
                           ),
                         ),
+                        SizedBox(height: 20),
                         Wrap(
                             runSpacing: 24,
                             children: [0, 1, 2, 3]
@@ -207,7 +209,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                                         style: Small),
                                         subtitle: Text('${orders[index]['number']}', style: Tiny.copyWith(color: Color(0xff929292)),),
                                     trailing: Text(
-                                        'N ${orders[index]['Price']}', style: SmallBold,),
+                                        'N ${value.format(orders[index]['Price']) }', style: SmallBold,),
                                   ),
                                 )
                                 .toList())
@@ -253,7 +255,31 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                           style: Small.copyWith(
                             color: Color(0xff525252),
                           ),
+                         
                         ),
+                         SizedBox(height: 20,),
+                         Wrap(
+                            runSpacing: 24,
+                            children: [0, 1, 2, 3]
+                                .map(
+                                  (index) => ListTile(
+                                    leading: Container(
+                                      width: 40,
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          color: Color(0xffC4C4C4)),
+                                      
+                                    ),
+                                    title: Text(orders[index]['Product'],
+                                        style: Small),
+                                        subtitle: Text('${orders[index]['number']}', style: Tiny.copyWith(color: Color(0xff929292)),),
+                                    trailing: Text(
+                                        'N ${value.format(orders[index]['Price']) }', style: SmallBold,),
+                                  ),
+                                )
+                                .toList())
                       ],
                     )
                   ],
@@ -286,6 +312,29 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
   ];
 
    List<Map<String, dynamic>> orders = [
+    {
+      'Product': 'Logitech MX Keys',
+      'number': 200,
+      'Price': 44000,
+    },
+    {
+      'Product': 'Logitech Ergo Keyboard',
+      'number': 120,
+      'Price': 24000,
+    },
+    {
+      'Product': 'Logitech Ergo Chair',
+      'number': 100,
+      'Price': 24000,
+    },
+    {
+      'Product': 'Logitech Ergo Mouse',
+      'number': 100,
+      'Price': 24000,
+    }
+  ];
+
+  List<Map<String, dynamic>> sales = [
     {
       'Product': 'Logitech MX Keys',
       'number': 200,
