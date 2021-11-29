@@ -30,7 +30,7 @@ class AnalyticsList extends StatelessWidget {
               )),
         ),
         separatorBuilder: (_, int) => SizedBox(
-          width: 32,
+          width: 22,
         ),
         itemCount: category.length,
       ),

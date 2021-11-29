@@ -13,3 +13,5 @@ Color kBlack = Color(0xff121212);
 TextStyle Header5 = TextStyle(fontSize: 24, fontWeight: FontWeight.w700);
 TextStyle Small = TextStyle(fontSize: 14, fontWeight: FontWeight.w400);
 TextStyle SmallBold = TextStyle(fontSize: 14, fontWeight: FontWeight.w600);
+TextStyle Tiny = TextStyle(fontSize: 12, fontWeight: FontWeight.w400);
+
