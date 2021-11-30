@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:scree/constants.dart';
 
 class NewProductScreen extends StatefulWidget {
   const NewProductScreen({Key? key}) : super(key: key);
@@ -11,7 +14,36 @@ class _NewProductScreenState extends State<NewProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(),
+      body: SingleChildScrollView(
+        child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 76),
+                IconButton(
+                  icon: Icon(CupertinoIcons.arrow_left, size: 22),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                SizedBox(height: 29),
+                Text('New product', style: Header5),
+                SizedBox(
+                  height: 24,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(
+                    hintText: 'Product Name',
+                    hintStyle: Small.copyWith(color: Color(0xff929292)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+              ],
+            )),
+      ),
     );
   }
 }
