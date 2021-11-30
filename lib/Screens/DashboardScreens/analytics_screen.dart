@@ -336,22 +336,22 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
 
   List<Map<String, dynamic>> sales = [
     {
-      'Product': 'Logitech MX Keys',
+      'Product': 'HP Pavillion x360',
       'number': 200,
       'Price': 44000,
     },
     {
-      'Product': 'Logitech Ergo Keyboard',
+      'Product': 'MacBook Pro',
       'number': 120,
       'Price': 24000,
     },
     {
-      'Product': 'Logitech Ergo Chair',
+      'Product': 'Oraimo Headsets',
       'number': 100,
       'Price': 24000,
     },
     {
-      'Product': 'Logitech Ergo Mouse',
+      'Product': 'Bag',
       'number': 100,
       'Price': 24000,
     }
