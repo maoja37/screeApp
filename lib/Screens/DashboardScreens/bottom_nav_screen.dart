@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:scree/Screens/DashboardScreens/analytics_screen.dart';
+import 'package:scree/Screens/DashboardScreens/manage_screen.dart';
 import 'package:scree/Screens/DashboardScreens/product_screen.dart';
 
 
@@ -21,11 +22,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     ),
     AnalyticsScreen(),
     ProductScreen(),
-    Scaffold(
-      body: Center(
-        child: Text('D'),
-      ),
-    ),
+    ManageScreen()
   ];
   var currentIndex = 0;
   @override
