@@ -41,6 +41,55 @@ class _NewProductScreenState extends State<NewProductScreen> {
                         borderRadius: BorderRadius.circular(12)),
                   ),
                 ),
+                SizedBox(
+                  height: 24,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(
+                    hintText: 'Brand',
+                    hintStyle: Small.copyWith(color: Color(0xff929292)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+                SizedBox(
+                  height: 24,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    hintText: 'Price',
+                    hintStyle: Small.copyWith(color: Color(0xff929292)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                  ),
+                ),
+                SizedBox(height: 29),
+                Container(
+                  width: 160,
+                  height: 160,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Color(0xffE4ECF7)),
+                  child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.image_rounded,
+                          color: Color(0xffB0C8E8),
+                          size: 40,
+                        ),
+                        Text(
+                          'Add image',
+                          style: Body,
+                        )
+                      ],
+                    ),
+                  ),
+                )
               ],
             )),
       ),

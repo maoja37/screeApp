@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:scree/Screens/DashboardScreens/add_new_product.dart';
 import 'package:scree/constants.dart';
 import 'package:intl/intl.dart';
 
@@ -33,24 +34,29 @@ class AddCollectionScreen extends StatelessWidget {
               SizedBox(
                 height: 42,
               ),
-              Row(
-                children: [
-                  CircleAvatar(
-                      backgroundColor: primary2,
-                      radius: 20,
-                      child: Center(
-                          child: Text(
-                        '+',
-                        style: TextStyle(fontSize: 30, color: Colors.white),
-                      ))),
-                  SizedBox(width: 12),
-                  Text(
-                    'New Product',
-                    style: Body.copyWith(
-                      color: Color(0xff121212),
-                    ),
-                  )
-                ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (builder)=> NewProductScreen()));
+                },
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                        backgroundColor: primary2,
+                        radius: 20,
+                        child: Center(
+                            child: Text(
+                          '+',
+                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        ))),
+                    SizedBox(width: 12),
+                    Text(
+                      'New Product',
+                      style: Body.copyWith(
+                        color: Color(0xff121212),
+                      ),
+                    )
+                  ],
+                ),
               ),
               SizedBox(height: 37),
               Wrap(
