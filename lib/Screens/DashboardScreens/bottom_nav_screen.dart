@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:scree/Screens/DashboardScreens/analytics_screen.dart';
-import 'package:scree/Screens/WebsiteSetup/products_screen.dart';
+import 'package:scree/Screens/DashboardScreens/product_screen.dart';
+
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({Key? key}) : super(key: key);
