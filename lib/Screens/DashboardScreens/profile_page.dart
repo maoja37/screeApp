@@ -23,7 +23,9 @@ class ProfileScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                   icon: Icon(
                     CupertinoIcons.arrow_left,
                   ),

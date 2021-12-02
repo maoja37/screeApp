@@ -37,6 +37,8 @@ dependencies:
   google_fonts: ^2.1.0
   flutter_animation_progress_bar: ^2.0.1
   iconly: ^1.0.1
+  flutter_svg: ^0.23.0
+  syncfusion_flutter_gauges: ^19.3.56
   
 
 dev_dependencies:

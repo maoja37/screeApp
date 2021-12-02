@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:scree/Screens/DashboardScreens/analytics_screen.dart';
+import 'package:scree/Screens/DashboardScreens/dashboard_screen.dart';
 import 'package:scree/Screens/DashboardScreens/manage_screen.dart';
 import 'package:scree/Screens/DashboardScreens/product_screen.dart';
 
@@ -9,17 +10,13 @@ import 'package:scree/Screens/DashboardScreens/product_screen.dart';
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({Key? key}) : super(key: key);
 
-  @override
+  @override     
   _BottomNavBarScreenState createState() => _BottomNavBarScreenState();
 }
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   final List _screens = [
-    Scaffold(
-      body: Center(
-        child: Text('A'),
-      ),
-    ),
+    DashBoardScreen(),
     AnalyticsScreen(),
     ProductScreen(),
     ManageScreen()
