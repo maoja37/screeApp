@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 40),
               TextFormField(
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.name,
                 obscureText: _obscureText,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(

@@ -122,6 +122,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                             children: [0, 1, 2, 3]
                                 .map(
                                   (index) => ListTile(
+                                    contentPadding: EdgeInsets.only(left: 0),
                                     leading: Container(
                                       width: 40,
                                       height: 40,
@@ -264,6 +265,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                             children: [0, 1, 2, 3]
                                 .map(
                                   (index) => ListTile(
+                                    contentPadding: EdgeInsets.only(left: 0),
                                     leading: Container(
                                       width: 40,
                                       height: 40,

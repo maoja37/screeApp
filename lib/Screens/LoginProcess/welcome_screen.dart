@@ -49,7 +49,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   borderRadius: BorderRadius.circular(100)),
               color: primary1,
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> SiteAbooutScreen()));
+                Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context)=> SiteAbooutScreen()), (route) => false);
+                
               },
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 18),
               child: Text(
