@@ -1,19 +1,14 @@
 class forStreaks {
-  hdvtrfkyib
-  hibgi
-  fufibtb
-  \fkyvof
-  yvkfof
-  yfovygib
-  yib
-  yib
-  ug
-  y
-  i
-
-  ig
-  vvvvvvvvvv
-  gii
-  jv
+khbhkbkbn
+kn
+k
+l
+blv
+vhj
+j 
+ h
+ h
+ h
+  ''
 
 }
